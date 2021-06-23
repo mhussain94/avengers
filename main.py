@@ -72,7 +72,7 @@ def lambda_handler(event, context):
         #return resp
         return {
         'statusCode': 200,
-        'body': json.dumps(str(resp))
+        'body': json.dumps(str("health check failed"))
     }
       except Exception as err:
         return {
@@ -85,7 +85,7 @@ def lambda_handler(event, context):
       update_record(input_url, error_count, table_name)
       return {
         'statusCode': 200,
-        'body': json.dumps(str(resp))
+        'body': json.dumps(str("health check failed"))
     }
   except Exception as err:
     return {
