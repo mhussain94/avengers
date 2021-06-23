@@ -1,9 +1,4 @@
 #default vpc taken from aws console
-variable "vpc_id" {
-    type= "string"
-    default= "vpc-24b1535d"
-  
-}
 
 variable "amiid" {}
 
