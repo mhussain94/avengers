@@ -23,7 +23,7 @@ There are 4 modules created seperately to achieve this task, the purpose of this
      - The Public IP Address of the Server
 
 3. AWS Role Module
-   - Creates the IAM Role Policy and the IAM Role necessary to provide permissions for Lambda Function to execucutes the logic
+   - Creates the IAM Role Policy and the IAM Role necessary to provide permissions for Lambda Function to execute the logic
    - Inputs:
      - The ARN of DynamoDB Table created using the DynamoDB Module
      - This is important, as we restrict our Lambda function to achieve it's task with the least priviledges
@@ -33,7 +33,7 @@ There are 4 modules created seperately to achieve this task, the purpose of this
 4. AWS Lambda Module
    - Creates a Python Lambda function using the code logic in *main.py* with it's dependencies and code inside the *main.zip* file
    - The Lambda function is designed to get invoked every 5 minutes by using *CloudWatch Event Rule*
-   - Inputs as Environment Variables:
+   - Inputs as AWS Lambda Environment Variables:
      - IAM Role created in AWS Role Module
      - The Public IP Address of created in the EC2 Module which holds our placeholder application i-e *Nginx Server*
    - Outputs:
