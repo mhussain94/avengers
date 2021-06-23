@@ -1,10 +1,10 @@
-#Terraform Project#
+# Terraform Project #
 
 This project is designed to leverage serverless architecture (AWS Lambda Function) to check the status of an endpoint and feed data to a *DynamoDB Table*. If the function returns with an error, it automatically increases the *error_count* attribute in the table.
 
 The project uses *Terraform (IaC)* to create all the necessary resources in AWS to perform it's function. As an examplary placeholder application, it deploys an EC2 instance and installs *Nginx server* on it. 
 
-##How does it work?##
+## How does it work? ##
 
 There are 4 modules created seperately to achieve this task, the purpose of this was to create decoupled architecture that can be further developed or reduced as per needs
 
@@ -40,12 +40,12 @@ There are 4 modules created seperately to achieve this task, the purpose of this
      - Name of the Lambda Function
 
 
-##How to make it work?##
+## How to make it work? ##
 1. Edit main.tf to with a desrired region, profile and credentials file path.
 2. Edit the AMIID *amiid* input in the main.tf file for the *aws_ec2_module*
 3. To add an SSH key to the EC2 server, unedit the *key_name* parameter in *ec2_module.tf* to a valid key
 4. After making the necessary changes, in the cloned directory run *Terraform apply*
 
-**Note**
+**Note:**
 Everything is deployed in the default VPC of the Region specified
 
