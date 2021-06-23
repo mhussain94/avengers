@@ -44,7 +44,7 @@ There are 4 modules created seperately to achieve this task, the purpose of this
 1. Edit main.tf file with the desired region, profile and credentials file path.
 2. Edit the AMIID *amiid* input in the main.tf file for the *aws_ec2_module*
 3. To add an SSH key to the EC2 server, unedit the *key_name* parameter in *ec2_module.tf* to a valid key
-4. After making the necessary changes, in the cloned directory run *Terraform apply*
+4. After making the necessary changes, in the cloned directory run *terraform init* first and then *terraform apply*
 
 **Note:**
 Everything is deployed in the default VPC of the Region specified
