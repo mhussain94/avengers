@@ -12,13 +12,13 @@ There are 4 modules created seperately to achieve this task, the purpose of this
    - Creates the DynamoDB table with the desired specifications
    - Outputs:
      - Name of the DynamoDB Table
-     - Hash_key of the DynamoDB Tables
+     - Hash_key of the DynamoDB Table
      - ARN of the DynamoDB Table
 
 2. AWS EC2 Module
-   - Creates the EC2 with the desired specificaitons and installs Nginx server on it using userdata.sh script in the main folder
+   - Creates the EC2 with the desired specifications and installs Nginx server on it using userdata.sh (as EC2 user data) script in the main folder
    - Inputs:
-     - AMI-ID of a Ubuntu 20.04 Machine
+     - AMI-ID of a Ubuntu (20.04) Machine
    - Outputs:
      - The Public IP Address of the Server
 
