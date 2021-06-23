@@ -6,7 +6,6 @@ variable "amiid" {}
 resource "aws_security_group" "avengers_ec2_sg" {
   name        = "avengers_ec2_sg"
   description = "avengers sg security group for ec2"
-  #vpc_id      = "${var.vpc_id}"
 
   ingress { #inbound
     description = "SSH from Outside"
@@ -34,11 +33,6 @@ resource "aws_security_group" "avengers_ec2_sg" {
   tags = {
     Name = "allow_tls"
   }
-}
-
-#providing ami
-variable "ami_id" {
-    default= "ami-0fc970315c2d38f01"
 }
 
 #creating instance
