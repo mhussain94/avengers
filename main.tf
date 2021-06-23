@@ -1,7 +1,7 @@
 #This needs to change for running
 provider "aws" {
   region                  = "eu-west-2"
-  shared_credentials_file = "/Users/Argedor/.aws/credentials"
+  shared_credentials_file = "/Users/Hussain/.aws/credentials"
   profile                 = "default"
 }
 
