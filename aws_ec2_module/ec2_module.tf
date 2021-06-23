@@ -52,7 +52,7 @@ resource "aws_instance" "avengers_ec2_instance" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.avengers_ec2_sg.id}"]
   user_data = "${file("userdata.sh")}"
-  key_name = "london"
+  #key_name = "london"
   tags = {
     Name = "avengers_ec2_instance"
   }
